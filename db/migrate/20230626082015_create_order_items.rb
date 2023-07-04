@@ -1,4 +1,4 @@
-class CreateOrderitems < ActiveRecord::Migration[6.1]
+class CreateOrderItems < ActiveRecord::Migration[6.1]
   def change
     create_table :orderitems do |t|
       t.integer :user_id
