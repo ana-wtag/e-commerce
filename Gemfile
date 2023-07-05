@@ -60,3 +60,5 @@ gem "grape", "~> 1.7"
 gem 'grape_on_rails_routes'
 
 gem "devise"
+
+gem "doorkeeper"

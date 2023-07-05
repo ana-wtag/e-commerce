@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  use_doorkeeper
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.htmls
   devise_for :users
     # root to: defines which controller action will handle requests to the root path
