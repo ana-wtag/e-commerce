@@ -449,12 +449,6 @@ Doorkeeper.configure do
   #   client.superapp? or resource_owner.admin?
   # end
 
-  skip_authorization do
-    true
-  end
-
-  use_refresh_token
-
   # Configure custom constraints for the Token Introspection request.
   # By default this configuration option allows to introspect a token by another
   # token of the same application, OR to introspect the token that belongs to
@@ -518,4 +512,10 @@ Doorkeeper.configure do
 
   # enable password grant
   grant_flows %w[password]
+
+  skip_authorization do
+    true
+  end
+
+  use_refresh_token
 end
