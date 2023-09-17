@@ -41,6 +41,14 @@ module V1
           end
 
       end 
+
+      resource :items do
+        desc 'Return specific item'
+        get ':id' do
+          items = Item.find(params[:id])
+          present items, with: V1::Entities::Item
+        end
+      end
     end
   end
 end
