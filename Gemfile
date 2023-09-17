@@ -62,3 +62,7 @@ gem 'grape_on_rails_routes'
 gem "devise"
 
 gem "doorkeeper"
+
+gem 'grape-entity'
+
+gem 'pry-rails', group: :development

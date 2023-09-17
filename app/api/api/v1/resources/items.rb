@@ -20,6 +20,27 @@ module V1
           present items
         end
       end
+
+      resource :items do
+        desc 'Add new item'
+        params do
+          requires :name,
+                   type: String
+          requires :description,
+                   type: String
+          requires :price,
+                   type: Integer
+          requires :available_quantity,
+                   type: Integer
+        end
+          post do
+            item = Item.new(params)
+            item.save!
+            binding.pry
+            present item, with: V1::Entities::Item
+          end
+
+      end 
     end
   end
 end
